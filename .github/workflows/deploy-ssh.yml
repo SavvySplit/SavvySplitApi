@@ -15,7 +15,7 @@ jobs:
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.HOSTINGER_SSH_KEY }}
+          key: ${{ secrets.SSH_KEY }}
           port: 22
           script: |
             cd /home/user/htdocs/srv797850.hstgr.cloud
