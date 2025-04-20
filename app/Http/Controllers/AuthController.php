@@ -9,7 +9,14 @@ use Illuminate\Validation\ValidationException;
 
 class AuthController extends Controller
 {
-    public function register(Request $request)
+/*     
+   * Register
+   * 
+   * 
+   * @unauthenticated
+ */    
+
+     public function register(Request $request)
     {
         $data = $request->validate([
             'name'     => 'required|string|max:255',
@@ -25,7 +32,7 @@ class AuthController extends Controller
 
         return response()->json(['message' => 'User registered successfully'], 201);
     }
-
+  //@unauthenticated
     public function login(Request $request)
     {
         $data = $request->validate([
@@ -50,6 +57,9 @@ class AuthController extends Controller
         ]);
     }
 
+    /**
+     * @authenticated 
+     */
     public function logout(Request $request)
     {
         $request->user()->tokens()->delete();
@@ -57,6 +67,10 @@ class AuthController extends Controller
         return response()->json(['message' => 'Logged out']);
     }
 
+
+    /**
+     * @authenticated 
+     */
     public function me(Request $request)
     {
         return response()->json($request->user());
