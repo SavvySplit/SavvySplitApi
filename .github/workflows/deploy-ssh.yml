@@ -1,0 +1,26 @@
+name: 🚀 SSH Deploy Laravel to Hostinger
+
+on:
+  push:
+    branches:
+      - main  # deploy on push to main branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy using SSH
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          port: 22
+          script: |
+            cd /home/user/htdocs/srv797850.hstgr.cloud
+            git pull origin main
+            composer install --no-dev --optimize-autoloader
+            php artisan migrate --force
+            php artisan config:cache
+            php artisan route:cache
