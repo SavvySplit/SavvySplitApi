@@ -11,7 +11,6 @@ class DashboardController extends Controller
     public function index()
     {
         // Example: count emails per day
-        return"test";
         $stats = Email::selectRaw('DATE(created_at) as date, COUNT(*) as count')
             ->groupBy('date')
             ->orderBy('date', 'asc')
