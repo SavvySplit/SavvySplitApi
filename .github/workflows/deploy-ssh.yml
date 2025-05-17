@@ -19,7 +19,9 @@ jobs:
           port: 22
           script: |
             cd /home/user/htdocs/srv797850.hstgr.cloud
-            git pull origin main
+            #git pull origin main
+            git reset --hard
+            git pull
             #composer install --no-dev --optimize-autoloader
             #php artisan migrate --force
             #php artisan config:cache
