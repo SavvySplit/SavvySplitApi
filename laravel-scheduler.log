@@ -4518,3 +4518,7 @@
   2025-05-17 01:27:00 Running ['artisan' app:read-inbox] ....... 816.73ms DONE
   ⇂ '/opt/homebrew/Cellar/php/8.4.6/bin/php' 'artisan' app:read-inbox > '/dev/null' 2>&1  
 
+
+  2025-05-17 01:28:00 Running ['artisan' app:read-inbox] ....... 804.07ms DONE
+  ⇂ '/opt/homebrew/Cellar/php/8.4.6/bin/php' 'artisan' app:read-inbox > '/dev/null' 2>&1  
+
