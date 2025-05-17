@@ -157,3 +157,25 @@
         @apply bg-background text-foreground;
     }
 }
+
+body.dark {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+  
+  body.dark a {
+    color: #90caf9;
+  }
+
+  body.dark-mode {
+    background-color: #111827;
+    color: #f9fafb;
+  }
+  
+  body.dark-mode .card,
+  body.dark-mode .tile {
+    background-color: #1f2937 !important;
+    color: #f9fafb;
+  }
+  
+  

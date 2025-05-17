@@ -20,11 +20,11 @@ class ComposerStaticInitbd8ccf4399678bdc599777e8dc4bc0b4
         '35a6ad97d21e794e7e22a17d806652e4' => __DIR__ . '/..' . '/nunomaduro/termwind/src/Functions.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
+        '2203a247e6fda86070a5e4e07aed533a' => __DIR__ . '/..' . '/symfony/clock/Resources/now.php',
+        'a1105708a18b76903365ca1c4aa61b02' => __DIR__ . '/..' . '/symfony/translation/Resources/functions.php',
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
-        '2203a247e6fda86070a5e4e07aed533a' => __DIR__ . '/..' . '/symfony/clock/Resources/now.php',
         '09f6b20656683369174dd6fa83b7e5fb' => __DIR__ . '/..' . '/symfony/polyfill-uuid/bootstrap.php',
-        'a1105708a18b76903365ca1c4aa61b02' => __DIR__ . '/..' . '/symfony/translation/Resources/functions.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         '47e1160838b5e5a10346ac4084b58c23' => __DIR__ . '/..' . '/laravel/prompts/src/helpers.php',
         '476ca15b8d69b04665cd879be9cb4c68' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Collections/functions.php',
@@ -53,6 +53,10 @@ class ComposerStaticInitbd8ccf4399678bdc599777e8dc4bc0b4
         array (
             'voku\\' => 5,
         ),
+        't' => 
+        array (
+            'thiagoalessio\\TesseractOCR\\' => 27,
+        ),
         'p' => 
         array (
             'phpDocumentor\\Reflection\\' => 25,
@@ -61,6 +65,8 @@ class ComposerStaticInitbd8ccf4399678bdc599777e8dc4bc0b4
         array (
             'Whoops\\' => 7,
             'Webmozart\\Assert\\' => 17,
+            'Webklex\\PHPIMAP\\' => 16,
+            'Webklex\\IMAP\\' => 13,
         ),
         'T' => 
         array (
@@ -100,6 +106,7 @@ class ComposerStaticInitbd8ccf4399678bdc599777e8dc4bc0b4
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
             'Symfony\\Component\\Clock\\' => 24,
+            'Spatie\\PdfToImage\\' => 18,
             'Spatie\\DataTransferObject\\' => 26,
             'Shalvah\\Upgrader\\' => 17,
             'Shalvah\\Clara\\' => 14,
@@ -219,6 +226,10 @@ class ComposerStaticInitbd8ccf4399678bdc599777e8dc4bc0b4
         array (
             0 => __DIR__ . '/..' . '/voku/portable-ascii/src/voku',
         ),
+        'thiagoalessio\\TesseractOCR\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/thiagoalessio/tesseract_ocr/src',
+        ),
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
@@ -232,6 +243,14 @@ class ComposerStaticInitbd8ccf4399678bdc599777e8dc4bc0b4
         'Webmozart\\Assert\\' => 
         array (
             0 => __DIR__ . '/..' . '/webmozart/assert/src',
+        ),
+        'Webklex\\PHPIMAP\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/webklex/php-imap/src',
+        ),
+        'Webklex\\IMAP\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/webklex/laravel-imap/src',
         ),
         'TijsVerkoyen\\CssToInlineStyles\\' => 
         array (
@@ -364,6 +383,10 @@ class ComposerStaticInitbd8ccf4399678bdc599777e8dc4bc0b4
         'Symfony\\Component\\Clock\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/clock',
+        ),
+        'Spatie\\PdfToImage\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/spatie/pdf-to-image/src',
         ),
         'Spatie\\DataTransferObject\\' => 
         array (
@@ -656,6 +679,7 @@ class ComposerStaticInitbd8ccf4399678bdc599777e8dc4bc0b4
     );
 
     public static $classMap = array (
+        'App\\Console\\Commands\\ReadInbox' => __DIR__ . '/../..' . '/app/Console/Commands/ReadInbox.php',
         'App\\Http\\Controllers\\AuthController' => __DIR__ . '/../..' . '/app/Http/Controllers/AuthController.php',
         'App\\Http\\Controllers\\Auth\\AuthenticatedSessionController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/AuthenticatedSessionController.php',
         'App\\Http\\Controllers\\Auth\\ConfirmablePasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmablePasswordController.php',
@@ -666,12 +690,15 @@ class ComposerStaticInitbd8ccf4399678bdc599777e8dc4bc0b4
         'App\\Http\\Controllers\\Auth\\RegisteredUserController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisteredUserController.php',
         'App\\Http\\Controllers\\Auth\\VerifyEmailController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerifyEmailController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/DashboardController.php',
+        'App\\Http\\Controllers\\EmailController' => __DIR__ . '/../..' . '/app/Http/Controllers/EmailController.php',
         'App\\Http\\Controllers\\Settings\\PasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Settings/PasswordController.php',
         'App\\Http\\Controllers\\Settings\\ProfileController' => __DIR__ . '/../..' . '/app/Http/Controllers/Settings/ProfileController.php',
         'App\\Http\\Middleware\\HandleAppearance' => __DIR__ . '/../..' . '/app/Http/Middleware/HandleAppearance.php',
         'App\\Http\\Middleware\\HandleInertiaRequests' => __DIR__ . '/../..' . '/app/Http/Middleware/HandleInertiaRequests.php',
         'App\\Http\\Requests\\Auth\\LoginRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Auth/LoginRequest.php',
         'App\\Http\\Requests\\Settings\\ProfileUpdateRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Settings/ProfileUpdateRequest.php',
+        'App\\Models\\Email' => __DIR__ . '/../..' . '/app/Models/Email.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
@@ -6592,6 +6619,10 @@ class ComposerStaticInitbd8ccf4399678bdc599777e8dc4bc0b4
         'Spatie\\DataTransferObject\\Reflection\\DataTransferObjectProperty' => __DIR__ . '/..' . '/spatie/data-transfer-object/src/Reflection/DataTransferObjectProperty.php',
         'Spatie\\DataTransferObject\\Validation\\ValidationResult' => __DIR__ . '/..' . '/spatie/data-transfer-object/src/Validation/ValidationResult.php',
         'Spatie\\DataTransferObject\\Validator' => __DIR__ . '/..' . '/spatie/data-transfer-object/src/Validator.php',
+        'Spatie\\PdfToImage\\Exceptions\\InvalidFormat' => __DIR__ . '/..' . '/spatie/pdf-to-image/src/Exceptions/InvalidFormat.php',
+        'Spatie\\PdfToImage\\Exceptions\\PageDoesNotExist' => __DIR__ . '/..' . '/spatie/pdf-to-image/src/Exceptions/PageDoesNotExist.php',
+        'Spatie\\PdfToImage\\Exceptions\\PdfDoesNotExist' => __DIR__ . '/..' . '/spatie/pdf-to-image/src/Exceptions/PdfDoesNotExist.php',
+        'Spatie\\PdfToImage\\Pdf' => __DIR__ . '/..' . '/spatie/pdf-to-image/src/Pdf.php',
         'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
         'Symfony\\Component\\Clock\\Clock' => __DIR__ . '/..' . '/symfony/clock/Clock.php',
         'Symfony\\Component\\Clock\\ClockAwareTrait' => __DIR__ . '/..' . '/symfony/clock/ClockAwareTrait.php',
@@ -7644,6 +7675,89 @@ class ComposerStaticInitbd8ccf4399678bdc599777e8dc4bc0b4
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Rule' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Rule.php',
         'UnhandledMatchError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
         'ValueError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',
+        'Webklex\\IMAP\\Commands\\ImapIdleCommand' => __DIR__ . '/..' . '/webklex/laravel-imap/src/Commands/ImapIdleCommand.php',
+        'Webklex\\IMAP\\Events\\Event' => __DIR__ . '/..' . '/webklex/laravel-imap/src/Events/Event.php',
+        'Webklex\\IMAP\\Events\\FlagDeletedEvent' => __DIR__ . '/..' . '/webklex/laravel-imap/src/Events/FlagDeletedEvent.php',
+        'Webklex\\IMAP\\Events\\FlagNewEvent' => __DIR__ . '/..' . '/webklex/laravel-imap/src/Events/FlagNewEvent.php',
+        'Webklex\\IMAP\\Events\\FolderDeletedEvent' => __DIR__ . '/..' . '/webklex/laravel-imap/src/Events/FolderDeletedEvent.php',
+        'Webklex\\IMAP\\Events\\FolderMovedEvent' => __DIR__ . '/..' . '/webklex/laravel-imap/src/Events/FolderMovedEvent.php',
+        'Webklex\\IMAP\\Events\\FolderNewEvent' => __DIR__ . '/..' . '/webklex/laravel-imap/src/Events/FolderNewEvent.php',
+        'Webklex\\IMAP\\Events\\MessageCopiedEvent' => __DIR__ . '/..' . '/webklex/laravel-imap/src/Events/MessageCopiedEvent.php',
+        'Webklex\\IMAP\\Events\\MessageDeletedEvent' => __DIR__ . '/..' . '/webklex/laravel-imap/src/Events/MessageDeletedEvent.php',
+        'Webklex\\IMAP\\Events\\MessageMovedEvent' => __DIR__ . '/..' . '/webklex/laravel-imap/src/Events/MessageMovedEvent.php',
+        'Webklex\\IMAP\\Events\\MessageNewEvent' => __DIR__ . '/..' . '/webklex/laravel-imap/src/Events/MessageNewEvent.php',
+        'Webklex\\IMAP\\Events\\MessageRestoredEvent' => __DIR__ . '/..' . '/webklex/laravel-imap/src/Events/MessageRestoredEvent.php',
+        'Webklex\\IMAP\\Facades\\Client' => __DIR__ . '/..' . '/webklex/laravel-imap/src/Facades/Client.php',
+        'Webklex\\IMAP\\Providers\\LaravelServiceProvider' => __DIR__ . '/..' . '/webklex/laravel-imap/src/Providers/LaravelServiceProvider.php',
+        'Webklex\\PHPIMAP\\Address' => __DIR__ . '/..' . '/webklex/php-imap/src/Address.php',
+        'Webklex\\PHPIMAP\\Attachment' => __DIR__ . '/..' . '/webklex/php-imap/src/Attachment.php',
+        'Webklex\\PHPIMAP\\Attribute' => __DIR__ . '/..' . '/webklex/php-imap/src/Attribute.php',
+        'Webklex\\PHPIMAP\\Client' => __DIR__ . '/..' . '/webklex/php-imap/src/Client.php',
+        'Webklex\\PHPIMAP\\ClientManager' => __DIR__ . '/..' . '/webklex/php-imap/src/ClientManager.php',
+        'Webklex\\PHPIMAP\\Config' => __DIR__ . '/..' . '/webklex/php-imap/src/Config.php',
+        'Webklex\\PHPIMAP\\Connection\\Protocols\\ImapProtocol' => __DIR__ . '/..' . '/webklex/php-imap/src/Connection/Protocols/ImapProtocol.php',
+        'Webklex\\PHPIMAP\\Connection\\Protocols\\LegacyProtocol' => __DIR__ . '/..' . '/webklex/php-imap/src/Connection/Protocols/LegacyProtocol.php',
+        'Webklex\\PHPIMAP\\Connection\\Protocols\\Protocol' => __DIR__ . '/..' . '/webklex/php-imap/src/Connection/Protocols/Protocol.php',
+        'Webklex\\PHPIMAP\\Connection\\Protocols\\ProtocolInterface' => __DIR__ . '/..' . '/webklex/php-imap/src/Connection/Protocols/ProtocolInterface.php',
+        'Webklex\\PHPIMAP\\Connection\\Protocols\\Response' => __DIR__ . '/..' . '/webklex/php-imap/src/Connection/Protocols/Response.php',
+        'Webklex\\PHPIMAP\\Decoder\\AttachmentDecoder' => __DIR__ . '/..' . '/webklex/php-imap/src/Decoder/AttachmentDecoder.php',
+        'Webklex\\PHPIMAP\\Decoder\\Decoder' => __DIR__ . '/..' . '/webklex/php-imap/src/Decoder/Decoder.php',
+        'Webklex\\PHPIMAP\\Decoder\\DecoderInterface' => __DIR__ . '/..' . '/webklex/php-imap/src/Decoder/DecoderInterface.php',
+        'Webklex\\PHPIMAP\\Decoder\\HeaderDecoder' => __DIR__ . '/..' . '/webklex/php-imap/src/Decoder/HeaderDecoder.php',
+        'Webklex\\PHPIMAP\\Decoder\\MessageDecoder' => __DIR__ . '/..' . '/webklex/php-imap/src/Decoder/MessageDecoder.php',
+        'Webklex\\PHPIMAP\\EncodingAliases' => __DIR__ . '/..' . '/webklex/php-imap/src/EncodingAliases.php',
+        'Webklex\\PHPIMAP\\Events\\Event' => __DIR__ . '/..' . '/webklex/php-imap/src/Events/Event.php',
+        'Webklex\\PHPIMAP\\Events\\FlagDeletedEvent' => __DIR__ . '/..' . '/webklex/php-imap/src/Events/FlagDeletedEvent.php',
+        'Webklex\\PHPIMAP\\Events\\FlagNewEvent' => __DIR__ . '/..' . '/webklex/php-imap/src/Events/FlagNewEvent.php',
+        'Webklex\\PHPIMAP\\Events\\FolderDeletedEvent' => __DIR__ . '/..' . '/webklex/php-imap/src/Events/FolderDeletedEvent.php',
+        'Webklex\\PHPIMAP\\Events\\FolderMovedEvent' => __DIR__ . '/..' . '/webklex/php-imap/src/Events/FolderMovedEvent.php',
+        'Webklex\\PHPIMAP\\Events\\FolderNewEvent' => __DIR__ . '/..' . '/webklex/php-imap/src/Events/FolderNewEvent.php',
+        'Webklex\\PHPIMAP\\Events\\MessageCopiedEvent' => __DIR__ . '/..' . '/webklex/php-imap/src/Events/MessageCopiedEvent.php',
+        'Webklex\\PHPIMAP\\Events\\MessageDeletedEvent' => __DIR__ . '/..' . '/webklex/php-imap/src/Events/MessageDeletedEvent.php',
+        'Webklex\\PHPIMAP\\Events\\MessageMovedEvent' => __DIR__ . '/..' . '/webklex/php-imap/src/Events/MessageMovedEvent.php',
+        'Webklex\\PHPIMAP\\Events\\MessageNewEvent' => __DIR__ . '/..' . '/webklex/php-imap/src/Events/MessageNewEvent.php',
+        'Webklex\\PHPIMAP\\Events\\MessageRestoredEvent' => __DIR__ . '/..' . '/webklex/php-imap/src/Events/MessageRestoredEvent.php',
+        'Webklex\\PHPIMAP\\Exceptions\\AuthFailedException' => __DIR__ . '/..' . '/webklex/php-imap/src/Exceptions/AuthFailedException.php',
+        'Webklex\\PHPIMAP\\Exceptions\\ConnectionFailedException' => __DIR__ . '/..' . '/webklex/php-imap/src/Exceptions/ConnectionFailedException.php',
+        'Webklex\\PHPIMAP\\Exceptions\\DecoderNotFoundException' => __DIR__ . '/..' . '/webklex/php-imap/src/Exceptions/DecoderNotFoundException.php',
+        'Webklex\\PHPIMAP\\Exceptions\\EventNotFoundException' => __DIR__ . '/..' . '/webklex/php-imap/src/Exceptions/EventNotFoundException.php',
+        'Webklex\\PHPIMAP\\Exceptions\\FolderFetchingException' => __DIR__ . '/..' . '/webklex/php-imap/src/Exceptions/FolderFetchingException.php',
+        'Webklex\\PHPIMAP\\Exceptions\\GetMessagesFailedException' => __DIR__ . '/..' . '/webklex/php-imap/src/Exceptions/GetMessagesFailedException.php',
+        'Webklex\\PHPIMAP\\Exceptions\\ImapBadRequestException' => __DIR__ . '/..' . '/webklex/php-imap/src/Exceptions/ImapBadRequestException.php',
+        'Webklex\\PHPIMAP\\Exceptions\\ImapServerErrorException' => __DIR__ . '/..' . '/webklex/php-imap/src/Exceptions/ImapServerErrorException.php',
+        'Webklex\\PHPIMAP\\Exceptions\\InvalidMessageDateException' => __DIR__ . '/..' . '/webklex/php-imap/src/Exceptions/InvalidMessageDateException.php',
+        'Webklex\\PHPIMAP\\Exceptions\\InvalidWhereQueryCriteriaException' => __DIR__ . '/..' . '/webklex/php-imap/src/Exceptions/InvalidWhereQueryCriteriaException.php',
+        'Webklex\\PHPIMAP\\Exceptions\\MaskNotFoundException' => __DIR__ . '/..' . '/webklex/php-imap/src/Exceptions/MaskNotFoundException.php',
+        'Webklex\\PHPIMAP\\Exceptions\\MessageContentFetchingException' => __DIR__ . '/..' . '/webklex/php-imap/src/Exceptions/MessageContentFetchingException.php',
+        'Webklex\\PHPIMAP\\Exceptions\\MessageFlagException' => __DIR__ . '/..' . '/webklex/php-imap/src/Exceptions/MessageFlagException.php',
+        'Webklex\\PHPIMAP\\Exceptions\\MessageHeaderFetchingException' => __DIR__ . '/..' . '/webklex/php-imap/src/Exceptions/MessageHeaderFetchingException.php',
+        'Webklex\\PHPIMAP\\Exceptions\\MessageNotFoundException' => __DIR__ . '/..' . '/webklex/php-imap/src/Exceptions/MessageNotFoundException.php',
+        'Webklex\\PHPIMAP\\Exceptions\\MessageSearchValidationException' => __DIR__ . '/..' . '/webklex/php-imap/src/Exceptions/MessageSearchValidationException.php',
+        'Webklex\\PHPIMAP\\Exceptions\\MessageSizeFetchingException' => __DIR__ . '/..' . '/webklex/php-imap/src/Exceptions/MessageSizeFetchingException.php',
+        'Webklex\\PHPIMAP\\Exceptions\\MethodNotFoundException' => __DIR__ . '/..' . '/webklex/php-imap/src/Exceptions/MethodNotFoundException.php',
+        'Webklex\\PHPIMAP\\Exceptions\\MethodNotSupportedException' => __DIR__ . '/..' . '/webklex/php-imap/src/Exceptions/MethodNotSupportedException.php',
+        'Webklex\\PHPIMAP\\Exceptions\\NotSupportedCapabilityException' => __DIR__ . '/..' . '/webklex/php-imap/src/Exceptions/NotSupportedCapabilityException.php',
+        'Webklex\\PHPIMAP\\Exceptions\\ProtocolNotSupportedException' => __DIR__ . '/..' . '/webklex/php-imap/src/Exceptions/ProtocolNotSupportedException.php',
+        'Webklex\\PHPIMAP\\Exceptions\\ResponseException' => __DIR__ . '/..' . '/webklex/php-imap/src/Exceptions/ResponseException.php',
+        'Webklex\\PHPIMAP\\Exceptions\\RuntimeException' => __DIR__ . '/..' . '/webklex/php-imap/src/Exceptions/RuntimeException.php',
+        'Webklex\\PHPIMAP\\Exceptions\\SpoofingAttemptDetectedException' => __DIR__ . '/..' . '/webklex/php-imap/src/Exceptions/SpoofingAttemptDetectedException.php',
+        'Webklex\\PHPIMAP\\Folder' => __DIR__ . '/..' . '/webklex/php-imap/src/Folder.php',
+        'Webklex\\PHPIMAP\\Header' => __DIR__ . '/..' . '/webklex/php-imap/src/Header.php',
+        'Webklex\\PHPIMAP\\IMAP' => __DIR__ . '/..' . '/webklex/php-imap/src/IMAP.php',
+        'Webklex\\PHPIMAP\\Message' => __DIR__ . '/..' . '/webklex/php-imap/src/Message.php',
+        'Webklex\\PHPIMAP\\Part' => __DIR__ . '/..' . '/webklex/php-imap/src/Part.php',
+        'Webklex\\PHPIMAP\\Query\\Query' => __DIR__ . '/..' . '/webklex/php-imap/src/Query/Query.php',
+        'Webklex\\PHPIMAP\\Query\\WhereQuery' => __DIR__ . '/..' . '/webklex/php-imap/src/Query/WhereQuery.php',
+        'Webklex\\PHPIMAP\\Structure' => __DIR__ . '/..' . '/webklex/php-imap/src/Structure.php',
+        'Webklex\\PHPIMAP\\Support\\AttachmentCollection' => __DIR__ . '/..' . '/webklex/php-imap/src/Support/AttachmentCollection.php',
+        'Webklex\\PHPIMAP\\Support\\FlagCollection' => __DIR__ . '/..' . '/webklex/php-imap/src/Support/FlagCollection.php',
+        'Webklex\\PHPIMAP\\Support\\FolderCollection' => __DIR__ . '/..' . '/webklex/php-imap/src/Support/FolderCollection.php',
+        'Webklex\\PHPIMAP\\Support\\Masks\\AttachmentMask' => __DIR__ . '/..' . '/webklex/php-imap/src/Support/Masks/AttachmentMask.php',
+        'Webklex\\PHPIMAP\\Support\\Masks\\Mask' => __DIR__ . '/..' . '/webklex/php-imap/src/Support/Masks/Mask.php',
+        'Webklex\\PHPIMAP\\Support\\Masks\\MessageMask' => __DIR__ . '/..' . '/webklex/php-imap/src/Support/Masks/MessageMask.php',
+        'Webklex\\PHPIMAP\\Support\\MessageCollection' => __DIR__ . '/..' . '/webklex/php-imap/src/Support/MessageCollection.php',
+        'Webklex\\PHPIMAP\\Support\\PaginatedCollection' => __DIR__ . '/..' . '/webklex/php-imap/src/Support/PaginatedCollection.php',
+        'Webklex\\PHPIMAP\\Traits\\HasEvents' => __DIR__ . '/..' . '/webklex/php-imap/src/Traits/HasEvents.php',
         'Webmozart\\Assert\\Assert' => __DIR__ . '/..' . '/webmozart/assert/src/Assert.php',
         'Webmozart\\Assert\\InvalidArgumentException' => __DIR__ . '/..' . '/webmozart/assert/src/InvalidArgumentException.php',
         'Webmozart\\Assert\\Mixin' => __DIR__ . '/..' . '/webmozart/assert/src/Mixin.php',
@@ -7804,6 +7918,17 @@ class ComposerStaticInitbd8ccf4399678bdc599777e8dc4bc0b4
         'phpDocumentor\\Reflection\\Utils' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/Utils.php',
         'staabm\\SideEffectsDetector\\SideEffect' => __DIR__ . '/..' . '/staabm/side-effects-detector/lib/SideEffect.php',
         'staabm\\SideEffectsDetector\\SideEffectsDetector' => __DIR__ . '/..' . '/staabm/side-effects-detector/lib/SideEffectsDetector.php',
+        'thiagoalessio\\TesseractOCR\\Command' => __DIR__ . '/..' . '/thiagoalessio/tesseract_ocr/src/Command.php',
+        'thiagoalessio\\TesseractOCR\\FeatureNotAvailableException' => __DIR__ . '/..' . '/thiagoalessio/tesseract_ocr/src/FeatureNotAvailableException.php',
+        'thiagoalessio\\TesseractOCR\\FriendlyErrors' => __DIR__ . '/..' . '/thiagoalessio/tesseract_ocr/src/FriendlyErrors.php',
+        'thiagoalessio\\TesseractOCR\\ImageNotFoundException' => __DIR__ . '/..' . '/thiagoalessio/tesseract_ocr/src/ImageNotFoundException.php',
+        'thiagoalessio\\TesseractOCR\\NoWritePermissionsForOutputFile' => __DIR__ . '/..' . '/thiagoalessio/tesseract_ocr/src/NoWritePermissionsForOutputFile.php',
+        'thiagoalessio\\TesseractOCR\\Option' => __DIR__ . '/..' . '/thiagoalessio/tesseract_ocr/src/Option.php',
+        'thiagoalessio\\TesseractOCR\\Process' => __DIR__ . '/..' . '/thiagoalessio/tesseract_ocr/src/Process.php',
+        'thiagoalessio\\TesseractOCR\\TesseractNotFoundException' => __DIR__ . '/..' . '/thiagoalessio/tesseract_ocr/src/TesseractNotFoundException.php',
+        'thiagoalessio\\TesseractOCR\\TesseractOCR' => __DIR__ . '/..' . '/thiagoalessio/tesseract_ocr/src/TesseractOCR.php',
+        'thiagoalessio\\TesseractOCR\\TesseractOcrException' => __DIR__ . '/..' . '/thiagoalessio/tesseract_ocr/src/TesseractOcrException.php',
+        'thiagoalessio\\TesseractOCR\\UnsuccessfulCommandException' => __DIR__ . '/..' . '/thiagoalessio/tesseract_ocr/src/UnsuccessfulCommandException.php',
         'voku\\helper\\ASCII' => __DIR__ . '/..' . '/voku/portable-ascii/src/voku/helper/ASCII.php',
     );
 
