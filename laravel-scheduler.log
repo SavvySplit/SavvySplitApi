@@ -4298,3 +4298,163 @@
   2025-05-17 00:28:01 Running ['artisan' app:read-inbox] ....... 852.82ms DONE
   ⇂ '/opt/homebrew/Cellar/php/8.4.6/bin/php' 'artisan' app:read-inbox > '/dev/null' 2>&1  
 
+
+  2025-05-17 00:29:00 Running ['artisan' app:read-inbox] ....... 872.38ms DONE
+  ⇂ '/opt/homebrew/Cellar/php/8.4.6/bin/php' 'artisan' app:read-inbox > '/dev/null' 2>&1  
+
+
+  2025-05-17 00:30:01 Running ['artisan' app:read-inbox] ....... 864.60ms DONE
+  ⇂ '/opt/homebrew/Cellar/php/8.4.6/bin/php' 'artisan' app:read-inbox > '/dev/null' 2>&1  
+
+
+  2025-05-17 00:31:01 Running ['artisan' app:read-inbox] ....... 881.90ms DONE
+  ⇂ '/opt/homebrew/Cellar/php/8.4.6/bin/php' 'artisan' app:read-inbox > '/dev/null' 2>&1  
+
+
+  2025-05-17 00:32:00 Running ['artisan' app:read-inbox] ....... 840.31ms DONE
+  ⇂ '/opt/homebrew/Cellar/php/8.4.6/bin/php' 'artisan' app:read-inbox > '/dev/null' 2>&1  
+
+
+  2025-05-17 00:33:01 Running ['artisan' app:read-inbox] ....... 844.25ms DONE
+  ⇂ '/opt/homebrew/Cellar/php/8.4.6/bin/php' 'artisan' app:read-inbox > '/dev/null' 2>&1  
+
+
+  2025-05-17 00:34:00 Running ['artisan' app:read-inbox] ....... 865.46ms DONE
+  ⇂ '/opt/homebrew/Cellar/php/8.4.6/bin/php' 'artisan' app:read-inbox > '/dev/null' 2>&1  
+
+
+  2025-05-17 00:35:00 Running ['artisan' app:read-inbox] ....... 875.86ms DONE
+  ⇂ '/opt/homebrew/Cellar/php/8.4.6/bin/php' 'artisan' app:read-inbox > '/dev/null' 2>&1  
+
+
+  2025-05-17 00:36:01 Running ['artisan' app:read-inbox] ............. 1s DONE
+  ⇂ '/opt/homebrew/Cellar/php/8.4.6/bin/php' 'artisan' app:read-inbox > '/dev/null' 2>&1  
+
+
+  2025-05-17 00:41:56 Running ['artisan' app:read-inbox] ............. 1s DONE
+  ⇂ '/opt/homebrew/Cellar/php/8.4.6/bin/php' 'artisan' app:read-inbox > '/dev/null' 2>&1  
+
+
+  2025-05-17 00:42:00 Running ['artisan' app:read-inbox] ....... 798.60ms DONE
+  ⇂ '/opt/homebrew/Cellar/php/8.4.6/bin/php' 'artisan' app:read-inbox > '/dev/null' 2>&1  
+
+
+  2025-05-17 00:43:00 Running ['artisan' app:read-inbox] ....... 818.54ms DONE
+  ⇂ '/opt/homebrew/Cellar/php/8.4.6/bin/php' 'artisan' app:read-inbox > '/dev/null' 2>&1  
+
+
+  2025-05-17 00:44:01 Running ['artisan' app:read-inbox] ....... 850.00ms DONE
+  ⇂ '/opt/homebrew/Cellar/php/8.4.6/bin/php' 'artisan' app:read-inbox > '/dev/null' 2>&1  
+
+
+  2025-05-17 00:45:00 Running ['artisan' app:read-inbox] ....... 816.65ms DONE
+  ⇂ '/opt/homebrew/Cellar/php/8.4.6/bin/php' 'artisan' app:read-inbox > '/dev/null' 2>&1  
+
+
+  2025-05-17 00:46:01 Running ['artisan' app:read-inbox] ....... 814.98ms DONE
+  ⇂ '/opt/homebrew/Cellar/php/8.4.6/bin/php' 'artisan' app:read-inbox > '/dev/null' 2>&1  
+
+
+  2025-05-17 00:47:00 Running ['artisan' app:read-inbox] ....... 849.77ms DONE
+  ⇂ '/opt/homebrew/Cellar/php/8.4.6/bin/php' 'artisan' app:read-inbox > '/dev/null' 2>&1  
+
+
+  2025-05-17 00:48:01 Running ['artisan' app:read-inbox] ....... 810.07ms DONE
+  ⇂ '/opt/homebrew/Cellar/php/8.4.6/bin/php' 'artisan' app:read-inbox > '/dev/null' 2>&1  
+
+
+  2025-05-17 00:49:00 Running ['artisan' app:read-inbox] ....... 838.09ms DONE
+  ⇂ '/opt/homebrew/Cellar/php/8.4.6/bin/php' 'artisan' app:read-inbox > '/dev/null' 2>&1  
+
+
+  2025-05-17 00:50:01 Running ['artisan' app:read-inbox] ....... 916.70ms DONE
+  ⇂ '/opt/homebrew/Cellar/php/8.4.6/bin/php' 'artisan' app:read-inbox > '/dev/null' 2>&1  
+
+
+  2025-05-17 00:51:00 Running ['artisan' app:read-inbox] ....... 895.04ms DONE
+  ⇂ '/opt/homebrew/Cellar/php/8.4.6/bin/php' 'artisan' app:read-inbox > '/dev/null' 2>&1  
+
+
+  2025-05-17 00:52:01 Running ['artisan' app:read-inbox] ....... 864.70ms DONE
+  ⇂ '/opt/homebrew/Cellar/php/8.4.6/bin/php' 'artisan' app:read-inbox > '/dev/null' 2>&1  
+
+
+  2025-05-17 00:53:00 Running ['artisan' app:read-inbox] ....... 836.16ms DONE
+  ⇂ '/opt/homebrew/Cellar/php/8.4.6/bin/php' 'artisan' app:read-inbox > '/dev/null' 2>&1  
+
+
+  2025-05-17 00:54:01 Running ['artisan' app:read-inbox] ....... 794.11ms DONE
+  ⇂ '/opt/homebrew/Cellar/php/8.4.6/bin/php' 'artisan' app:read-inbox > '/dev/null' 2>&1  
+
+
+  2025-05-17 00:55:00 Running ['artisan' app:read-inbox] ....... 899.56ms DONE
+  ⇂ '/opt/homebrew/Cellar/php/8.4.6/bin/php' 'artisan' app:read-inbox > '/dev/null' 2>&1  
+
+
+  2025-05-17 00:56:01 Running ['artisan' app:read-inbox] ....... 775.31ms DONE
+  ⇂ '/opt/homebrew/Cellar/php/8.4.6/bin/php' 'artisan' app:read-inbox > '/dev/null' 2>&1  
+
+
+  2025-05-17 00:57:00 Running ['artisan' app:read-inbox] ....... 854.97ms DONE
+  ⇂ '/opt/homebrew/Cellar/php/8.4.6/bin/php' 'artisan' app:read-inbox > '/dev/null' 2>&1  
+
+
+  2025-05-17 00:58:01 Running ['artisan' app:read-inbox] ....... 817.55ms DONE
+  ⇂ '/opt/homebrew/Cellar/php/8.4.6/bin/php' 'artisan' app:read-inbox > '/dev/null' 2>&1  
+
+
+  2025-05-17 00:59:00 Running ['artisan' app:read-inbox] ....... 843.15ms DONE
+  ⇂ '/opt/homebrew/Cellar/php/8.4.6/bin/php' 'artisan' app:read-inbox > '/dev/null' 2>&1  
+
+
+  2025-05-17 01:00:01 Running ['artisan' app:read-inbox] ....... 932.95ms DONE
+  ⇂ '/opt/homebrew/Cellar/php/8.4.6/bin/php' 'artisan' app:read-inbox > '/dev/null' 2>&1  
+
+
+  2025-05-17 01:01:01 Running ['artisan' app:read-inbox] ....... 836.42ms DONE
+  ⇂ '/opt/homebrew/Cellar/php/8.4.6/bin/php' 'artisan' app:read-inbox > '/dev/null' 2>&1  
+
+
+  2025-05-17 01:02:01 Running ['artisan' app:read-inbox] ....... 874.83ms DONE
+  ⇂ '/opt/homebrew/Cellar/php/8.4.6/bin/php' 'artisan' app:read-inbox > '/dev/null' 2>&1  
+
+
+  2025-05-17 01:03:01 Running ['artisan' app:read-inbox] ....... 843.93ms DONE
+  ⇂ '/opt/homebrew/Cellar/php/8.4.6/bin/php' 'artisan' app:read-inbox > '/dev/null' 2>&1  
+
+
+  2025-05-17 01:04:00 Running ['artisan' app:read-inbox] ....... 840.15ms DONE
+  ⇂ '/opt/homebrew/Cellar/php/8.4.6/bin/php' 'artisan' app:read-inbox > '/dev/null' 2>&1  
+
+
+  2025-05-17 01:05:01 Running ['artisan' app:read-inbox] ....... 880.43ms DONE
+  ⇂ '/opt/homebrew/Cellar/php/8.4.6/bin/php' 'artisan' app:read-inbox > '/dev/null' 2>&1  
+
+
+  2025-05-17 01:06:00 Running ['artisan' app:read-inbox] ....... 878.87ms DONE
+  ⇂ '/opt/homebrew/Cellar/php/8.4.6/bin/php' 'artisan' app:read-inbox > '/dev/null' 2>&1  
+
+
+  2025-05-17 01:07:01 Running ['artisan' app:read-inbox] ....... 851.33ms DONE
+  ⇂ '/opt/homebrew/Cellar/php/8.4.6/bin/php' 'artisan' app:read-inbox > '/dev/null' 2>&1  
+
+
+  2025-05-17 01:08:00 Running ['artisan' app:read-inbox] ....... 818.07ms DONE
+  ⇂ '/opt/homebrew/Cellar/php/8.4.6/bin/php' 'artisan' app:read-inbox > '/dev/null' 2>&1  
+
+
+  2025-05-17 01:09:01 Running ['artisan' app:read-inbox] ....... 847.81ms DONE
+  ⇂ '/opt/homebrew/Cellar/php/8.4.6/bin/php' 'artisan' app:read-inbox > '/dev/null' 2>&1  
+
+
+  2025-05-17 01:10:00 Running ['artisan' app:read-inbox] ....... 842.04ms DONE
+  ⇂ '/opt/homebrew/Cellar/php/8.4.6/bin/php' 'artisan' app:read-inbox > '/dev/null' 2>&1  
+
+
+  2025-05-17 01:11:01 Running ['artisan' app:read-inbox] ....... 859.05ms DONE
+  ⇂ '/opt/homebrew/Cellar/php/8.4.6/bin/php' 'artisan' app:read-inbox > '/dev/null' 2>&1  
+
+
+  2025-05-17 01:12:00 Running ['artisan' app:read-inbox] ....... 826.35ms DONE
+  ⇂ '/opt/homebrew/Cellar/php/8.4.6/bin/php' 'artisan' app:read-inbox > '/dev/null' 2>&1  
+
