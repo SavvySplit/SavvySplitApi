@@ -128,7 +128,7 @@ class ReadInbox extends Command
                         'ocr_text' => $ocrText
                     ]);
 
-            $this->info("Email saved: {$subject}");
+                logger()->info("Email saved: {$subject}");
 
             $message->setFlag('Seen');
             AnalyzeOcrWithMistral::dispatch($email);
