@@ -35,7 +35,7 @@ class ReadInbox extends Command
     public function handle()
     {
         // Ensure Ghostscript (gs) is available when this command runs
-         putenv('PATH=' . getenv('PATH') . ':/opt/homebrew/bin');
+         ////////putenv('PATH=' . getenv('PATH') . ':/opt/homebrew/bin');
 
         $client = Client::account('default');
         //dd("test");
@@ -63,8 +63,36 @@ class ReadInbox extends Command
 
                 $extension = strtolower(pathinfo($filePath , PATHINFO_EXTENSION));
 
+               try {
+                    $escapedPath = escapeshellarg($filePath);
+                    $pythonScript = base_path('/ocr.py');
+                    $escapedScript = escapeshellarg($pythonScript);
+
+                    $command = "python3 $escapedScript $escapedPath";
+
+                    // Debug output
+                    logger()->info("Running OCR command: $command");
+
+                    $output = shell_exec($command . " 2>&1");  // Capture errors too
+                    logger()->info("OCR output: " . $output);
+
+                    if ($output === null || trim($output) === '') {
+                        $ocrText .= "\n[Error: OCR script failed to execute or returned no output]";
+                    } else {
+                        $result = json_decode($output, true);
+                        if (isset($result['error'])) {
+                            $ocrText .= "\n[OCR Error: " . $result['error'] . "]";
+                        } else {
+                            $ocrText .= "\n--- OCR Result: " . basename($filePath) . " ---\n" . $result['text'] . "\n";
+                        }
+                    }
+                } catch (\Exception $e) {
+                    $ocrText .= "\n[Error processing " . basename($filePath) . "]: " . $e->getMessage();
+                }
+
+                
             
-                try {
+               /*  try {
                     if( $extension == "pdf"){
                         $pdf = new Pdf($filePath);
                         $pageCount = $pdf->getNumberOfPages();
@@ -85,7 +113,7 @@ class ReadInbox extends Command
                     
                 } catch (\Exception $e) {
                     $ocrText .= "\n[Error processing " . basename($filePath) ."\n\n ". $e."]";
-                }
+                } */
 
             }
 
@@ -102,7 +130,7 @@ class ReadInbox extends Command
 
             $this->info("Email saved: {$subject}");
 
-            $message->setFlag('Seen');
+            //$message->setFlag('Seen');
             AnalyzeOcrWithMistral::dispatch($email);
 
         }

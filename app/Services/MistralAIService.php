@@ -14,9 +14,10 @@ class MistralAIService
     public function analyze(string $ocrText): ?string
 {
     try {
-        $response = Http::withOptions(['timeout' => 200])->post($this->baseUrl . '/api/generate', [
+        $response = Http::withOptions(['timeout' => 300])->post($this->baseUrl . '/api/generate', [
             'model' => $this->model,
-            'prompt' => "With quick response, analyze the following OCR text and extract relevant structured data as JSON object, include document type/classification:\n\n" . $ocrText,
+            'prompt' => "Generate a valid JSON object with no comments based on the following OCR text \n\n" . $ocrText,
+             //and include document type/classification, take into account letter S with an amount is a dollar sign:\n\n" . $ocrText,
             'stream' => false,
         ]);
 
