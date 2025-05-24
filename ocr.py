@@ -1,8 +1,14 @@
 # ocr.py
+import os
+# Set environment variables early to suppress low-level warnings
+os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
+os.environ["TORCH_CPP_LOG_LEVEL"] = "ERROR"
+os.environ["PYTORCH_JIT_LOG_LEVEL"] = "ERROR"
+os.environ["KMP_WARNINGS"] = "0"
+os.environ["OMP_NUM_THREADS"] = "1"  # Optional: Limit CPU threads
 import sys
 import easyocr
 import json
-import os
 import numpy as np
 from pdf2image import convert_from_path
 import warnings
