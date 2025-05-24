@@ -53,6 +53,7 @@ class ReadInbox extends Command
             $ocrText = '';
 
             $attachments = $message->getAttachments();
+            logger()->info("NUmber of attachements: ". count($attachments));
 
             foreach ($attachments as $attachment) {
                 $fileName = uniqid() . '_' . $attachment->getName();
