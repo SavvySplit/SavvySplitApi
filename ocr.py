@@ -10,6 +10,8 @@ import warnings
 
 # Suppress all warnings (like PyTorch's pin_memory one)
 warnings.filterwarnings("ignore")
+sys.stderr = open(os.devnull, 'w')
+
 
 file_path = sys.argv[1]
 
@@ -19,7 +21,9 @@ extracted_text = []
 try:
     if file_path.lower().endswith('.pdf'):
         # Convert PDF pages to images
-        images = convert_from_path(file_path, poppler_path="/opt/homebrew/bin", dpi=400)  # Set poppler_path if needed
+        #images = convert_from_path(file_path, poppler_path="/opt/homebrew/bin", dpi=400)  # Set poppler_path if needed
+        images = convert_from_path(file_path, poppler_path='/usr/bin', dpi=400)  # Set poppler_path if needed
+
         for image in images:
             text = reader.readtext(np.array(image), detail=0)
             extracted_text.extend(text)

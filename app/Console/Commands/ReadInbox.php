@@ -130,7 +130,7 @@ class ReadInbox extends Command
 
             $this->info("Email saved: {$subject}");
 
-            //$message->setFlag('Seen');
+            $message->setFlag('Seen');
             AnalyzeOcrWithMistral::dispatch($email);
 
         }
