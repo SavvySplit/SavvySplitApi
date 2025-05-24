@@ -68,7 +68,7 @@ class ReadInbox extends Command
                     $pythonScript = base_path('/ocr.py');
                     $escapedScript = escapeshellarg($pythonScript);
 
-                    $command = "/root/ocr-env/python3 $escapedScript $escapedPath";
+                    $command = "/root/ocr-env/bin/python3 $escapedScript $escapedPath";
 
                     // Debug output
                     logger()->info("Running OCR command: $command");
