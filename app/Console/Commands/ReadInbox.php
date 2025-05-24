@@ -39,10 +39,14 @@ class ReadInbox extends Command
 
         $client = Client::account('default');
         //dd("test");
+        logger()->info("Connect to Mail box: ");
+
         $client->connect();
 
         $folder = $client->getFolder('INBOX');
+        logger()->info("Get Unseen Message: ");
         $messages = $folder->messages()->unseen()->get();
+        logger()->info("Unseen Messages count: " . count($messages));
 
         foreach ($messages as $message) {
             $subject = $message->getSubject();
