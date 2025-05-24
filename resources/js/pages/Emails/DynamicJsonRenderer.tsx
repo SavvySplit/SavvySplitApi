@@ -47,7 +47,7 @@ const renderArrayTable = (arr: any[]) => {
           <TableRow key={rowIndex}>
             {headers.map((key, colIndex) => (
               <TableCell key={colIndex}>
-                {isPlainObject(item[key])
+                {isPlainObject(item[key]) || Array.isArray(item[key])
                   ? renderNested(item[key], 0)
                   : item[key] ?? ''}
               </TableCell>
@@ -59,7 +59,7 @@ const renderArrayTable = (arr: any[]) => {
   );
 };
 
-const renderNested = (value: any, depth: number) => {
+const renderNested = (value: any, depth: number): React.ReactNode => {
   if (Array.isArray(value)) {
     if (value.length > 0 && isPlainObject(value[0])) {
       return renderArrayTable(value);
@@ -71,13 +71,17 @@ const renderNested = (value: any, depth: number) => {
           <TextField
             key={idx}
             variant="outlined"
-            value={item}
+            value={
+              typeof item === 'object'
+                ? JSON.stringify(item, null, 2)
+                : item ?? ''
+            }
             fullWidth
+            multiline
+            minRows={1}
             size="small"
             InputProps={{ readOnly: true }}
-            sx={{ 
-                backgroundColor: '#f3f4f6',
-                mb: 1 }}
+            sx={{ backgroundColor: '#f3f4f6', mb: 1 }}
           />
         ))}
       </Box>
@@ -100,19 +104,26 @@ const renderNested = (value: any, depth: number) => {
             <Typography sx={{ width: 200, fontWeight: 500 }}>
               {formatKey(k)}
             </Typography>
-            {isPlainObject(v) || Array.isArray(v) ? (
-              <Box sx={{ ml: 2, width: '100%' }}>{renderNested(v, depth + 1)}</Box>
-            ) : (
-              <TextField
-                variant="outlined"
-                value={v ?? ''}
-                fullWidth
-                size="small"
-                InputProps={{ readOnly: true }}
-                sx={{ backgroundColor: '#f3f4f6',
-                    ml: 2 }}
-              />
-            )}
+            <Box sx={{ ml: 2, width: '100%' }}>
+              {isPlainObject(v) || Array.isArray(v) ? (
+                renderNested(v, depth + 1)
+              ) : (
+                <TextField
+                  variant="outlined"
+                  value={
+                    typeof v === 'object'
+                      ? JSON.stringify(v, null, 2)
+                      : v ?? ''
+                  }
+                  fullWidth
+                  multiline
+                  minRows={1}
+                  size="small"
+                  InputProps={{ readOnly: true }}
+                  sx={{ backgroundColor: '#f3f4f6' }}
+                />
+              )}
+            </Box>
           </Box>
         ))}
       </Box>
@@ -122,13 +133,13 @@ const renderNested = (value: any, depth: number) => {
   return (
     <TextField
       variant="outlined"
-      value={value ?? ''}
+      value={typeof value === 'object' ? JSON.stringify(value, null, 2) : value ?? ''}
       fullWidth
+      multiline
+      minRows={1}
       size="small"
       InputProps={{ readOnly: true }}
-      sx={{ 
-        backgroundColor: '#f3f4f6',
-        mb: 1 }}
+      sx={{ backgroundColor: '#f3f4f6', mb: 1 }}
     />
   );
 };
