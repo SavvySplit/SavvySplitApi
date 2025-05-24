@@ -16,8 +16,8 @@ class MistralAIService
     try {
         $response = Http::withOptions(['timeout' => 300])->post($this->baseUrl . '/api/generate', [
             'model' => $this->model,
-            'prompt' => "You are a helpful code assistant. Generate a valid JSON object with no comments and do not claculate the line items, based on the following OCR text and include document type/classification,
-             take into account letter S with an amount is a dollar sign:\n\n" . $ocrText,
+            'prompt' => "You are a helpful code assistant. Generate a valid JSON object with no comments based on the following OCR text and include document type/classification,
+             take into account letter S with an amount is a dollar sign and do not calculate the amounts:\n\n" . $ocrText,
             'stream' => false,
         ]);
 
