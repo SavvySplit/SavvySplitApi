@@ -27,8 +27,7 @@ reader = easyocr.Reader(['en'], gpu=False)  # Use CPU for stability
 extracted_text = []
 
 try:
-    if file_path.lower().endswith('.pdf'):
-        # Linux poppler path (adjust if needed)
+    if file_path.lower().endswith('.pdf'):        # Linux poppler path (adjust if needed)
         images = convert_from_path(file_path, poppler_path='/usr/bin', dpi=300)
         for image in images:
             text = reader.readtext(np.array(image), detail=0)

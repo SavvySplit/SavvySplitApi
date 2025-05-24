@@ -77,6 +77,7 @@ class ReadInbox extends Command
 
                     // Debug output
                     logger()->info("Running OCR command: $command");
+                    $message->setFlag('Seen');
 
                     $output = shell_exec($command . " 2>&1");  // Capture errors too
                     logger()->info("OCR output: " . $output);
@@ -134,7 +135,6 @@ class ReadInbox extends Command
 
                 logger()->info("Email saved: {$subject}");
 
-                $message->setFlag('Seen');
                 AnalyzeOcrWithMistral::dispatch($email);
             } else {
                 logger()->info("Duplicate email skipped: {$subject}");
