@@ -20,7 +20,7 @@ class ReadInbox extends Command
      * @var string
      */
     protected $signature = 'app:read-inbox';
-    
+
 
     /**
      * The console command description.
@@ -35,7 +35,7 @@ class ReadInbox extends Command
     public function handle()
     {
         // Ensure Ghostscript (gs) is available when this command runs
-         ////////putenv('PATH=' . getenv('PATH') . ':/opt/homebrew/bin');
+        ////////putenv('PATH=' . getenv('PATH') . ':/opt/homebrew/bin');
 
         $client = Client::account('default');
         //dd("test");
@@ -61,9 +61,9 @@ class ReadInbox extends Command
                 file_put_contents($filePath, $attachment->getContent());
                 $attachmentsList[] = $fileName;
 
-                $extension = strtolower(pathinfo($filePath , PATHINFO_EXTENSION));
+                $extension = strtolower(pathinfo($filePath, PATHINFO_EXTENSION));
 
-               try {
+                try {
                     $escapedPath = escapeshellarg($filePath);
                     $pythonScript = base_path('/ocr.py');
                     $escapedScript = escapeshellarg($pythonScript);
@@ -90,9 +90,7 @@ class ReadInbox extends Command
                     $ocrText .= "\n[Error processing " . basename($filePath) . "]: " . $e->getMessage();
                 }
 
-                
-            
-               /*  try {
+                /*  try {
                     if( $extension == "pdf"){
                         $pdf = new Pdf($filePath);
                         $pageCount = $pdf->getNumberOfPages();
@@ -114,28 +112,43 @@ class ReadInbox extends Command
                 } catch (\Exception $e) {
                     $ocrText .= "\n[Error processing " . basename($filePath) ."\n\n ". $e."]";
                 } */
-
             }
 
-
-
             // 👉 Save email and attachments in database
-            $email = Email::create([
-                        'subject' => $subject,
-                        'from' => $from,
-                        'body' => $body,
-                        'attachments' => json_encode($attachmentsList),
-                        'ocr_text' => $ocrText
-                    ]);
+            $messageId = $message->getMessageId();
+
+            if (!Email::where('message_id', $messageId)->exists()) {
+                $email = Email::create([
+                    'message_id' => $messageId,
+                    'subject' => $subject,
+                    'from' => $from,
+                    'body' => $body,
+                    'attachments' => json_encode($attachmentsList),
+                    'ocr_text' => $ocrText
+                ]);
 
                 logger()->info("Email saved: {$subject}");
 
-            $message->setFlag('Seen');
-            AnalyzeOcrWithMistral::dispatch($email);
+                $message->setFlag('Seen');
+                AnalyzeOcrWithMistral::dispatch($email);
+            } else {
+                logger()->info("Duplicate email skipped: {$subject}");
+            }
 
+            /* $email = Email::create([
+                'subject' => $subject,
+                'from' => $from,
+                'body' => $body,
+                'attachments' => json_encode($attachmentsList),
+                'ocr_text' => $ocrText
+            ]);
+
+            logger()->info("Email saved: {$subject}");
+
+            $message->setFlag('Seen');
+            AnalyzeOcrWithMistral::dispatch($email); */
         }
 
         return 0;
-        }
-    
+    }
 }
